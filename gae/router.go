@@ -22,17 +22,13 @@ func preflight(w http.ResponseWriter, r *http.Request) {
 
 func resolve(w http.ResponseWriter, r *http.Request) {
 	corsHeaders(w)
-	variantName := mux.Vars(r)["variant"]
-	variant, found := variants.Variants[variantName]
-	if !found {
-		http.Error(w, fmt.Sprintf("Variant %q not found", variantName), 404)
-		return
-	}
-	p := &Phase{}
-	if err := json.NewDecoder(r.Body).Decode(p); err != nil {
+	requestBody := &RequestBody{}
+	if err := json.NewDecoder(r.Body).Decode(requestBody); err != nil {
 		http.Error(w, err.Error(), 400)
 		return
 	}
+	p := requestBody.Phase
+	variant := variants.FromJson(requestBody.VariantData)
 	state, err := p.State(variant)
 	if err != nil {
 		http.Error(w, err.Error(), 400)

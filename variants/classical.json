@@ -1,0 +1,1056 @@
+{
+  "Nations": ["England", "France", "Germany", "Italy", "Russia", "Austria", "Turkey"],
+  "StartingSupplyCenters": {
+    "lon": "England",
+    "edi": "England",
+    "lvp": "England",
+    "bre": "France",
+    "par": "France",
+    "mar": "France",
+    "kie": "Germany",
+    "ber": "Germany",
+    "mun": "Germany",
+    "ven": "Italy",
+    "rom": "Italy",
+    "nap": "Italy",
+    "stp": "Russia",
+    "war": "Russia",
+    "mos": "Russia",
+    "sev": "Russia",
+    "vie": "Austria",
+    "bud": "Austria",
+    "tri": "Austria",
+    "con": "Turkey",
+    "ank": "Turkey",
+    "smy": "Turkey"
+  },
+  "StartingUnits": {
+    "lon": {
+      "Nation": "England",
+      "Type": "Fleet"
+    },
+    "edi": {
+      "Nation": "England",
+      "Type": "Fleet"
+    },
+    "lvp": {
+      "Nation": "England",
+      "Type": "Army"
+    },
+    "bre": {
+      "Nation": "France",
+      "Type": "Fleet"
+    },
+    "par": {
+      "Nation": "France",
+      "Type": "Army"
+    },
+    "mar": {
+      "Nation": "France",
+      "Type": "Army"
+    },
+    "kie": {
+      "Nation": "Germany",
+      "Type": "Fleet"
+    },
+    "ber": {
+      "Nation": "Germany",
+      "Type": "Army"
+    },
+    "mun": {
+      "Nation": "Germany",
+      "Type": "Army"
+    },
+    "ven": {
+      "Nation": "Italy",
+      "Type": "Army"
+    },
+    "rom": {
+      "Nation": "Italy",
+      "Type": "Army"
+    },
+    "nap": {
+      "Nation": "Italy",
+      "Type": "Fleet"
+    },
+    "stp/sc": {
+      "Nation": "Russia",
+      "Type": "Fleet"
+    },
+    "war": {
+      "Nation": "Russia",
+      "Type": "Army"
+    },
+    "mos": {
+      "Nation": "Russia",
+      "Type": "Army"
+    },
+    "sev": {
+      "Nation": "Russia",
+      "Type": "Fleet"
+    },
+    "vie": {
+      "Nation": "Austria",
+      "Type": "Army"
+    },
+    "bud": {
+      "Nation": "Austria",
+      "Type": "Army"
+    },
+    "tri": {
+      "Nation": "Austria",
+      "Type": "Fleet"
+    },
+    "con": {
+      "Nation": "Turkey",
+      "Type": "Army"
+    },
+    "ank": {
+      "Nation": "Turkey",
+      "Type": "Fleet"
+    },
+    "smy": {
+      "Nation": "Turkey",
+      "Type": "Army"
+    }
+  },
+  "StartingYear": 1901,
+  "Regions": {
+    "nao": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nwg": ["Sea"],
+        "cly": ["Sea"],
+        "lvp": ["Sea"],
+        "iri": ["Sea"],
+        "mao": ["Sea"]
+      }
+    },
+    "nwg": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nao": ["Sea"],
+        "bar": ["Sea"],
+        "nwy": ["Sea"],
+        "nth": ["Sea"],
+        "edi": ["Sea"],
+        "cly": ["Sea"]
+      }
+    },
+    "bar": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nwg": ["Sea"],
+        "stp/nc": ["Sea"],
+        "nwy": ["Sea"],
+        "stp": ["Sea"]
+      }
+    },
+    "stp/nc": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "bar": ["Sea"],
+        "nwy": ["Sea"]
+      }
+    },
+    "stp": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "fin": ["Land"],
+        "nwy": ["Land"],
+        "mos": ["Land"],
+        "lvn": ["Land"],
+        "bar": ["Sea"],
+        "bot": ["Sea"]
+      }
+    },
+    "mos": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "stp": ["Land"],
+        "sev": ["Land"],
+        "ukr": ["Land"],
+        "war": ["Land"],
+        "lvn": ["Land"]
+      }
+    },
+    "sev": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "ukr": ["Land"],
+        "mos": ["Land"],
+        "arm": ["Land", "Sea"],
+        "bla": ["Sea"],
+        "rum": ["Land", "Sea"]
+      }
+    },
+    "arm": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "ank": ["Land", "Sea"],
+        "bla": ["Sea"],
+        "sev": ["Land", "Sea"],
+        "syr": ["Land"],
+        "smy": ["Land"]
+      }
+    },
+    "syr": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "eas": ["Sea"],
+        "smy": ["Land", "Sea"],
+        "arm": ["Land"]
+      }
+    },
+    "eas": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "ion": ["Sea"],
+        "aeg": ["Sea"],
+        "smy": ["Sea"],
+        "syr": ["Sea"]
+      }
+    },
+    "ion": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "apu": ["Sea"],
+        "adr": ["Sea"],
+        "tun": ["Sea"],
+        "tys": ["Sea"],
+        "nap": ["Sea"],
+        "alb": ["Sea"],
+        "gre": ["Sea"],
+        "aeg": ["Sea"],
+        "eas": ["Sea"]
+      }
+    },
+    "tun": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "naf": ["Land", "Sea"],
+        "wes": ["Sea"],
+        "tys": ["Sea"],
+        "ion": ["Sea"]
+      }
+    },
+    "naf": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "wes": ["Sea"],
+        "tun": ["Land", "Sea"]
+      }
+    },
+    "mao": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "wes": ["Sea"],
+        "nao": ["Sea"],
+        "iri": ["Sea"],
+        "eng": ["Sea"],
+        "bre": ["Sea"],
+        "gas": ["Sea"],
+        "spa/nc": ["Sea"],
+        "por": ["Sea"],
+        "spa/sc": ["Sea"],
+        "naf": ["Sea"],
+        "spa": ["Sea"]
+      }
+    },
+    "iri": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nao": ["Sea"],
+        "lvp": ["Sea"],
+        "wal": ["Sea"],
+        "eng": ["Sea"],
+        "mao": ["Sea"]
+      }
+    },
+    "lvp": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "iri": ["Sea"],
+        "nao": ["Sea"],
+        "cly": ["Land", "Sea"],
+        "edi": ["Land"],
+        "yor": ["Land"],
+        "wal": ["Land", "Sea"]
+      }
+    },
+    "cly": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "nao": ["Sea"],
+        "nwg": ["Sea"],
+        "edi": ["Land", "Sea"],
+        "lvp": ["Land", "Sea"]
+      }
+    },
+    "edi": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "cly": ["Land", "Sea"],
+        "nwg": ["Land"],
+        "nth": ["Land"],
+        "yor": ["Land", "Sea"],
+        "lvp": ["Land"]
+      }
+    },
+    "nth": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "eng": ["Sea"],
+        "edi": ["Sea"],
+        "nwg": ["Sea"],
+        "nwy": ["Sea"],
+        "ska": ["Sea"],
+        "den": ["Sea"],
+        "hel": ["Sea"],
+        "hol": ["Sea"],
+        "bel": ["Sea"],
+        "lon": ["Sea"],
+        "yor": ["Sea"]
+      }
+    },
+    "nwy": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "nth": ["Sea"],
+        "nwg": ["Sea"],
+        "bar": ["Sea"],
+        "stp/nc": ["Sea"],
+        "stp": ["Land"],
+        "fin": ["Land"],
+        "swe": ["Land", "Sea"],
+        "ska": ["Sea"]
+      }
+    },
+    "stp/sc": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "bot": ["Sea"],
+        "fin": ["Sea"],
+        "lvn": ["Sea"]
+      }
+    },
+    "lvn": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "stp": ["Land"],
+        "bal": ["Sea"],
+        "bot": ["Sea"],
+        "stp/sc": ["Sea"],
+        "mos": ["Land"],
+        "war": ["Land"],
+        "pru": ["Land", "Sea"]
+      }
+    },
+    "war": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "sil": ["Land"],
+        "pru": ["Land"],
+        "lvn": ["Land"],
+        "mos": ["Land"],
+        "ukr": ["Land"],
+        "gal": ["Land"]
+      }
+    },
+    "ukr": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "war": ["Land"],
+        "mos": ["Land"],
+        "sev": ["Land"],
+        "rum": ["Land"],
+        "gal": ["Land"]
+      }
+    },
+    "bla": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "bul/ec": ["Sea"],
+        "rum": ["Sea"],
+        "sev": ["Sea"],
+        "arm": ["Sea"],
+        "ank": ["Sea"],
+        "con": ["Sea"],
+        "bul": ["Sea"]
+      }
+    },
+    "ank": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "con": ["Land", "Sea"],
+        "bla": ["Sea"],
+        "arm": ["Land", "Sea"],
+        "smy": ["Land"]
+      }
+    },
+    "smy": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "aeg": ["Sea"],
+        "con": ["Land", "Sea"],
+        "ank": ["Land"],
+        "arm": ["Land"],
+        "syr": ["Land", "Sea"],
+        "eas": ["Sea"]
+      }
+    },
+    "aeg": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "eas": ["Sea"],
+        "ion": ["Sea"],
+        "gre": ["Sea"],
+        "bul/sc": ["Sea"],
+        "con": ["Sea"],
+        "smy": ["Sea"],
+        "bul": ["Sea"]
+      }
+    },
+    "gre": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "ion": ["Sea"],
+        "alb": ["Land", "Sea"],
+        "ser": ["Land"],
+        "bul": ["Land"],
+        "bul/sc": ["Sea"],
+        "aeg": ["Sea"]
+      }
+    },
+    "nap": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "tys": ["Land"],
+        "rom": ["Land", "Sea"],
+        "apu": ["Land", "Sea"],
+        "ion": ["Sea"]
+      }
+    },
+    "tys": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "wes": ["Sea"],
+        "lyo": ["Sea"],
+        "tus": ["Sea"],
+        "rom": ["Sea"],
+        "nap": ["Sea"],
+        "ion": ["Sea"],
+        "tun": ["Sea"]
+      }
+    },
+    "wes": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "spa/sc": ["Sea"],
+        "lyo": ["Sea"],
+        "tys": ["Sea"],
+        "tun": ["Sea"],
+        "naf": ["Sea"],
+        "spa": ["Sea"]
+      }
+    },
+    "spa/sc": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "por": ["Sea"],
+        "mar": ["Sea"],
+        "lyo": ["Sea"],
+        "wes": ["Sea"]
+      }
+    },
+    "spa": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "por": ["Land"],
+        "gas": ["Land"],
+        "mar": ["Land"],
+        "mao": ["Sea"],
+        "lyo": ["Sea"],
+        "wes": ["Sea"]
+      }
+    },
+    "spa/nc": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "por": ["Sea"],
+        "mao": ["Sea"],
+        "gas": ["Sea"]
+      }
+    },
+    "por": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "spa/nc": ["Sea"],
+        "spa": ["Land"],
+        "spa/sc": ["Sea"]
+      }
+    },
+    "gas": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "bre": ["Land", "Sea"],
+        "par": ["Land"],
+        "bur": ["Land"],
+        "mar": ["Land"],
+        "spa": ["Land"],
+        "spa/nc": ["Sea"]
+      }
+    },
+    "bre": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "eng": ["Sea"],
+        "pic": ["Land", "Sea"],
+        "par": ["Land"],
+        "gas": ["Land", "Sea"]
+      }
+    },
+    "eng": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "mao": ["Sea"],
+        "iri": ["Sea"],
+        "wal": ["Sea"],
+        "lon": ["Sea"],
+        "nth": ["Sea"],
+        "bel": ["Sea"],
+        "pic": ["Sea"],
+        "bre": ["Sea"]
+      }
+    },
+    "wal": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "iri": ["Sea"],
+        "lvp": ["Land", "Sea"],
+        "yor": ["Land"],
+        "lon": ["Land", "Sea"],
+        "eng": ["Sea"]
+      }
+    },
+    "yor": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "lvp": ["Land"],
+        "edi": ["Land", "Sea"],
+        "nth": ["Sea"],
+        "lon": ["Land", "Sea"],
+        "wal": ["Land"]
+      }
+    },
+    "ska": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nth": ["Sea"],
+        "nwy": ["Sea"],
+        "swe": ["Sea"],
+        "den": ["Sea"]
+      }
+    },
+    "swe": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "ska": ["Sea"],
+        "nwy": ["Land", "Sea"],
+        "fin": ["Land", "Sea"],
+        "bot": ["Sea"],
+        "bal": ["Sea"],
+        "den": ["Land", "Sea"]
+      }
+    },
+    "fin": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "nwy": ["Land"],
+        "bot": ["Sea"],
+        "swe": ["Land", "Sea"],
+        "stp": ["Land"],
+        "stp/sc": ["Sea"]
+      }
+    },
+    "bot": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "swe": ["Sea"],
+        "fin": ["Sea"],
+        "stp/sc": ["Sea"],
+        "lvn": ["Sea"],
+        "bal": ["Sea"],
+        "stp": ["Sea"]
+      }
+    },
+    "bal": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "den": ["Sea"],
+        "swe": ["Sea"],
+        "bot": ["Sea"],
+        "lvn": ["Sea"],
+        "pru": ["Sea"],
+        "ber": ["Sea"],
+        "kie": ["Sea"]
+      }
+    },
+    "pru": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "ber": ["Land", "Sea"],
+        "bal": ["Sea"],
+        "lvn": ["Land", "Sea"],
+        "war": ["Land"],
+        "sil": ["Land"]
+      }
+    },
+    "sil": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "mun": ["Land"],
+        "ber": ["Land"],
+        "pru": ["Land"],
+        "war": ["Land"],
+        "gal": ["Land"],
+        "boh": ["Land"]
+      }
+    },
+    "gal": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "boh": ["Land"],
+        "sil": ["Land"],
+        "war": ["Land"],
+        "ukr": ["Land"],
+        "rum": ["Land"],
+        "bud": ["Land"],
+        "vie": ["Land"]
+      }
+    },
+    "rum": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "bla": ["Sea"],
+        "bud": ["Land"],
+        "gal": ["Land"],
+        "ukr": ["Land"],
+        "sev": ["Land", "Sea"],
+        "bul/ec": ["Sea"],
+        "bul": ["Land"],
+        "ser": ["Land"]
+      }
+    },
+    "bul/ec": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "rum": ["Sea"],
+        "bla": ["Sea"],
+        "con": ["Sea"]
+      }
+    },
+    "bul": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "ser": ["Land"],
+        "rum": ["Land"],
+        "con": ["Land"],
+        "gre": ["Land"],
+        "aeg": ["Sea"],
+        "bla": ["Sea"]
+      }
+    },
+    "con": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "bul/sc": ["Sea"],
+        "bul": ["Land"],
+        "bul/ec": ["Sea"],
+        "bla": ["Sea"],
+        "ank": ["Land", "Sea"],
+        "smy": ["Land", "Sea"],
+        "aeg": ["Sea"]
+      }
+    },
+    "bul/sc": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "gre": ["Sea"],
+        "con": ["Sea"],
+        "aeg": ["Sea"]
+      }
+    },
+    "ser": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "tri": ["Land"],
+        "bud": ["Land"],
+        "rum": ["Land"],
+        "bul": ["Land"],
+        "gre": ["Land"],
+        "alb": ["Land"]
+      }
+    },
+    "alb": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "adr": ["Sea"],
+        "tri": ["Land", "Sea"],
+        "ser": ["Land"],
+        "gre": ["Land", "Sea"],
+        "ion": ["Sea"]
+      }
+    },
+    "adr": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "ven": ["Sea"],
+        "tri": ["Sea"],
+        "alb": ["Sea"],
+        "ion": ["Sea"],
+        "apu": ["Sea"]
+      }
+    },
+    "apu": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "rom": ["Land"],
+        "ven": ["Land", "Sea"],
+        "adr": ["Sea"],
+        "ion": ["Sea"],
+        "nap": ["Land", "Sea"]
+      }
+    },
+    "rom": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "tys": ["Sea"],
+        "tus": ["Land", "Sea"],
+        "ven": ["Land"],
+        "apu": ["Land"],
+        "nap": ["Land", "Sea"]
+      }
+    },
+    "tus": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "lyo": ["Sea"],
+        "pie": ["Land", "Sea"],
+        "ven": ["Land"],
+        "rom": ["Land", "Sea"],
+        "tys": ["Sea"]
+      }
+    },
+    "lyo": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "spa/sc": ["Sea"],
+        "mar": ["Sea"],
+        "pie": ["Sea"],
+        "tus": ["Sea"],
+        "tys": ["Sea"],
+        "wes": ["Sea"],
+        "spa": ["Sea"]
+      }
+    },
+    "mar": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "spa": ["Land"],
+        "gas": ["Land"],
+        "bur": ["Land"],
+        "pie": ["Land", "Sea"],
+        "lyo": ["Sea"],
+        "spa/sc": ["Sea"]
+      }
+    },
+    "bur": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "par": ["Land"],
+        "pic": ["Land"],
+        "bel": ["Land"],
+        "ruh": ["Land"],
+        "mun": ["Land"],
+        "mar": ["Land"],
+        "gas": ["Land"]
+      }
+    },
+    "par": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "bre": ["Land"],
+        "pic": ["Land"],
+        "bur": ["Land"],
+        "gas": ["Land"]
+      }
+    },
+    "pic": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "bre": ["Land", "Sea"],
+        "eng": ["Sea"],
+        "bel": ["Land", "Sea"],
+        "bur": ["Land"],
+        "par": ["Land"]
+      }
+    },
+    "lon": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "wal": ["Land", "Sea"],
+        "yor": ["Land", "Sea"],
+        "nth": ["Sea"],
+        "eng": ["Sea"]
+      }
+    },
+    "bel": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "pic": ["Land", "Sea"],
+        "eng": ["Sea"],
+        "nth": ["Sea"],
+        "hol": ["Land", "Sea"],
+        "ruh": ["Land"],
+        "bur": ["Land"]
+      }
+    },
+    "hol": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "nth": ["Sea"],
+        "hel": ["Sea"],
+        "kie": ["Land", "Sea"],
+        "ruh": ["Land"],
+        "bel": ["Land", "Sea"]
+      }
+    },
+    "hel": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Sea"],
+      "Neighbors": {
+        "nth": ["Sea"],
+        "den": ["Sea"],
+        "kie": ["Sea"],
+        "hol": ["Sea"]
+      }
+    },
+    "den": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "hel": ["Sea"],
+        "nth": ["Sea"],
+        "ska": ["Sea"],
+        "swe": ["Land", "Sea"],
+        "bal": ["Sea"],
+        "kie": ["Land", "Sea"]
+      }
+    },
+    "ber": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "kie": ["Land", "Sea"],
+        "bal": ["Sea"],
+        "pru": ["Land", "Sea"],
+        "sil": ["Land"],
+        "mun": ["Land"]
+      }
+    },
+    "mun": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "bur": ["Land"],
+        "ruh": ["Land"],
+        "kie": ["Land"],
+        "ber": ["Land"],
+        "sil": ["Land"],
+        "boh": ["Land"],
+        "tyr": ["Land"]
+      }
+    },
+    "boh": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "mun": ["Land"],
+        "sil": ["Land"],
+        "gal": ["Land"],
+        "vie": ["Land"],
+        "tyr": ["Land"]
+      }
+    },
+    "vie": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "tyr": ["Land"],
+        "boh": ["Land"],
+        "gal": ["Land"],
+        "bud": ["Land"],
+        "tri": ["Land"]
+      }
+    },
+    "bud": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "tri": ["Land"],
+        "vie": ["Land"],
+        "gal": ["Land"],
+        "rum": ["Land"],
+        "ser": ["Land"]
+      }
+    },
+    "tri": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "adr": ["Sea"],
+        "ven": ["Land", "Sea"],
+        "tyr": ["Land"],
+        "vie": ["Land"],
+        "bud": ["Land"],
+        "ser": ["Land"],
+        "alb": ["Land", "Sea"]
+      }
+    },
+    "ven": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "tus": ["Land"],
+        "pie": ["Land"],
+        "tyr": ["Land"],
+        "tri": ["Land", "Sea"],
+        "adr": ["Sea"],
+        "apu": ["Land", "Sea"],
+        "rom": ["Land"]
+      }
+    },
+    "pie": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "mar": ["Land", "Sea"],
+        "tyr": ["Land"],
+        "ven": ["Land"],
+        "tus": ["Land", "Coast"],
+        "lyo": ["Sea"]
+      }
+    },
+    "ruh": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "bel": ["Land"],
+        "hol": ["Land"],
+        "kie": ["Land"],
+        "mun": ["Land"],
+        "bur": ["Land"]
+      }
+    },
+    "tyr": {
+      "IsSupplyCenter": false,
+      "RegionType": ["Land"],
+      "Neighbors": {
+        "mun": ["Land"],
+        "boh": ["Land"],
+        "vie": ["Land"],
+        "tri": ["Land"],
+        "ven": ["Land"],
+        "pie": ["Land"]
+      }
+    },
+    "kie": {
+      "IsSupplyCenter": true,
+      "RegionType": ["Land", "Sea"],
+      "Neighbors": {
+        "hol": ["Land", "Sea"],
+        "hel": ["Sea"],
+        "den": ["Land", "Sea"],
+        "bal": ["Sea"],
+        "ber": ["Land", "Sea"],
+        "mun": ["Land"],
+        "ruh": ["Land"]
+      }
+    }
+  }
+}

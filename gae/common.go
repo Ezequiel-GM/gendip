@@ -3,9 +3,15 @@ package main
 import (
 	"github.com/zond/godip"
 	"github.com/zond/godip/state"
+	"github.com/zond/godip/variants"
 	"github.com/zond/godip/variants/classical"
 	"github.com/zond/godip/variants/common"
 )
+
+type RequestBody struct {
+	Phase       Phase
+	VariantData variants.VariantData
+}
 
 type Phase struct {
 	Season        godip.Season
