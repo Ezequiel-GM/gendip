@@ -1012,7 +1012,7 @@
         "mar": ["Land", "Sea"],
         "tyr": ["Land"],
         "ven": ["Land"],
-        "tus": ["Land", "Coast"],
+        "tus": ["Land", "Sea"],
         "lyo": ["Sea"]
       }
     },
