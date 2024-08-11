@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 var BuildOrder = &build{}

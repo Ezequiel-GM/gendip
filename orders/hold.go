@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 var HoldOrder = &hold{}

@@ -1,7 +1,7 @@
-package main
+package common
 
 import (
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/state"
 	"github.com/zond/godip/variants"
 	"github.com/zond/godip/variants/classical"

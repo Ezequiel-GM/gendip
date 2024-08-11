@@ -5,7 +5,7 @@ import (
 
 	"github.com/zond/godip/variants/classical"
 
-	dip "github.com/zond/godip"
+	dip "github.com/zond/godip/godip"
 	tst "github.com/zond/godip/variants/testing"
 )
 

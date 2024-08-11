@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 func New(graph godip.Graph, phase godip.Phase, backupRule godip.BackupRule, flags map[godip.Flag]bool, neutralOrders func(State) map[godip.Province]godip.Adjudicator) *State {

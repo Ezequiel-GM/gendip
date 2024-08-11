@@ -1,7 +1,7 @@
 package twentytwenty
 
 import (
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/graph"
 	"github.com/zond/godip/orders"
 	"github.com/zond/godip/phase"

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/orders"
 	tst "github.com/zond/godip/variants/testing"
 )

@@ -3,7 +3,7 @@ package youngstownredux
 import (
 	"testing"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 
 	tst "github.com/zond/godip/variants/testing"
 )

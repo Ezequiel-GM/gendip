@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 func New() *Graph {
