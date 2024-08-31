@@ -29,6 +29,7 @@ type Phase struct {
 func NewPhase(state *state.State) *Phase {
 	currentPhase := state.Phase()
 	p := &Phase{
+		Bounces:     map[godip.Province]map[godip.Province]bool{},
 		Orders:      map[godip.Nation]map[godip.Province][]string{},
 		Resolutions: map[godip.Province]string{},
 		Season:      currentPhase.Season(),
