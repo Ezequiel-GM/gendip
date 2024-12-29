@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/orders"
 )
 

@@ -3,7 +3,7 @@ package start
 import (
 	"github.com/zond/godip/graph"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 func SCs() (result map[godip.Province]godip.Nation) {

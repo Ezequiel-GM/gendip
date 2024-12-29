@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 func assertPath(t *testing.T, g *Graph, first, last godip.Province, reverse bool, found []godip.Province) {

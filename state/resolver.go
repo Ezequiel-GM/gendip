@@ -3,7 +3,7 @@ package state
 import (
 	"fmt"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 type resolver struct {

@@ -1,13 +1,13 @@
 package gatewaywest
 
 import (
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/graph"
-	"github.com/zond/godip/state"
 	"github.com/zond/godip/phase"
+	"github.com/zond/godip/state"
 	"github.com/zond/godip/variants/classical"
-	"github.com/zond/godip/variants/hundred"
 	"github.com/zond/godip/variants/common"
+	"github.com/zond/godip/variants/hundred"
 )
 
 const (

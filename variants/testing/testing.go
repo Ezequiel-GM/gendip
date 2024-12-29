@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/orders"
 	"github.com/zond/godip/state"
 )

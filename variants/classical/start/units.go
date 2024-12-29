@@ -1,7 +1,7 @@
 package start
 
 import (
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 func Units() map[godip.Province]godip.Unit {

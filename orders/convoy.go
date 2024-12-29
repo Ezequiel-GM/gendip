@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 )
 
 var ConvoyOrder = &convoy{}

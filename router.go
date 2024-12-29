@@ -1,14 +1,20 @@
-package main
+package gendip
 
 import (
 	"encoding/json"
 	"fmt"
 	"net/http"
 
+	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
 	"github.com/gorilla/mux"
+	"github.com/zond/godip/common"
 	"github.com/zond/godip/variants"
 	"google.golang.org/appengine"
 )
+
+func init() {
+	functions.HTTP("resolve", resolve);
+}
 
 func corsHeaders(w http.ResponseWriter) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -22,7 +28,7 @@ func preflight(w http.ResponseWriter, r *http.Request) {
 
 func resolve(w http.ResponseWriter, r *http.Request) {
 	corsHeaders(w)
-	requestBody := &RequestBody{}
+	requestBody := &common.RequestBody{}
 	if err := json.NewDecoder(r.Body).Decode(requestBody); err != nil {
 		http.Error(w, err.Error(), 400)
 		return
@@ -39,7 +45,7 @@ func resolve(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// Load the new godip phase from the state
-	nextPhase := NewPhase(state)
+	nextPhase := common.NewPhase(state)
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	if err = json.NewEncoder(w).Encode(nextPhase); err != nil {
 		http.Error(w, err.Error(), 500)
@@ -60,7 +66,7 @@ func start(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), 500)
 		return
 	}
-	phase := NewPhase(state)
+	phase := common.NewPhase(state)
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	if err = json.NewEncoder(w).Encode(phase); err != nil {
 		http.Error(w, err.Error(), 500)

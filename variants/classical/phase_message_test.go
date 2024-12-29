@@ -3,7 +3,7 @@ package classical
 import (
 	"testing"
 
-	"github.com/zond/godip"
+	"github.com/zond/godip/godip"
 	"github.com/zond/godip/orders"
 )
 
