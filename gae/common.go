@@ -52,7 +52,7 @@ func (self *Phase) State(variant common.Variant) (*state.State, error) {
 	if err != nil {
 		return nil, err
 	}
-	return classical.Blank(variant.Phase(
+	return variant.Blank(variant.Phase(
 		self.Year,
 		self.Season,
 		self.Type,
