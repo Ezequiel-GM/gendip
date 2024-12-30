@@ -1,4 +1,4 @@
-package gendip
+package main
 
 import (
 	"encoding/json"
@@ -13,7 +13,7 @@ import (
 )
 
 func init() {
-	functions.HTTP("resolve", resolve);
+	functions.HTTP("resolve", resolve)
 }
 
 func corsHeaders(w http.ResponseWriter) {
