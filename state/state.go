@@ -65,24 +65,24 @@ func (self *movement) execute(s *State) (err error) {
 }
 
 type State struct {
-	orders             map[godip.Province]godip.Adjudicator
+	orders                  map[godip.Province]godip.Adjudicator
 	previouslyAppliedOrders map[godip.Province]godip.Adjudicator
-	units              map[godip.Province]godip.Unit
-	dislodgeds         map[godip.Province]godip.Unit
-	supplyCenters      map[godip.Province]godip.Nation
-	graph              godip.Graph
-	phase              godip.Phase
-	backupRule         godip.BackupRule
-	neutralOrders      func(State) map[godip.Province]godip.Adjudicator
-	resolutions        map[godip.Province]error
-	dislodgers         map[godip.Province]godip.Province
-	forceDisbands      map[godip.Province]bool
-	movements          []*movement
-	bounces            map[godip.Province]map[godip.Province]bool
-	profile            map[string]time.Duration
-	profileCounts      map[string]int
-	memoizedProvSlices map[string][]godip.Province
-	flags              map[godip.Flag]bool
+	units                   map[godip.Province]godip.Unit
+	dislodgeds              map[godip.Province]godip.Unit
+	supplyCenters           map[godip.Province]godip.Nation
+	graph                   godip.Graph
+	phase                   godip.Phase
+	backupRule              godip.BackupRule
+	neutralOrders           func(State) map[godip.Province]godip.Adjudicator
+	resolutions             map[godip.Province]error
+	dislodgers              map[godip.Province]godip.Province
+	forceDisbands           map[godip.Province]bool
+	movements               []*movement
+	bounces                 map[godip.Province]map[godip.Province]bool
+	profile                 map[string]time.Duration
+	profileCounts           map[string]int
+	memoizedProvSlices      map[string][]godip.Province
+	flags                   map[godip.Flag]bool
 }
 
 func (self *State) Profile(a string, t time.Time) {
@@ -263,7 +263,7 @@ func (self *State) Next() (err error) {
 // PreviouslyAppliedOrders contains all the orders which were applied during the processing of state.Next().
 // If it is empty there are no previous orders yet as you probably have not run state.Next() or instantiated the state otherwise.
 // Note that the orders specified here do not necessarily succeed. Again: This function only lists the orders which were applied during the processing of state.Next().
-func (self *State) PreviouslyAppliedOrders() map[godip.Province]godip.Adjudicator{
+func (self *State) PreviouslyAppliedOrders() map[godip.Province]godip.Adjudicator {
 	return self.previouslyAppliedOrders
 }
 
@@ -344,6 +344,9 @@ func (self *State) SetDislodger(attacker, victim godip.Province) {
 }
 
 func (self *State) AddBounce(src, dst godip.Province) {
+	if self.bounces == nil {
+		self.bounces = make(map[godip.Province]map[godip.Province]bool)
+	}
 	if existing, ok := self.bounces[dst.Super()]; ok {
 		existing[src.Super()] = true
 	} else {

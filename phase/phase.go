@@ -3,6 +3,7 @@ package phase
 import (
 	"bytes"
 	"fmt"
+	"os"
 	"sort"
 	"strings"
 
@@ -376,9 +377,12 @@ func (self *Phase) PostProcess(s godip.State) (err error) {
 			}
 		}
 	}
+	fmt.Fprintln(os.Stderr, "self.AdjustSCs: ", self.AdjustSCs(self))
 	if self.AdjustSCs(self) {
 		s.Find(func(p godip.Province, o godip.Order, u *godip.Unit) bool {
 			if u != nil {
+				fmt.Fprintln(os.Stderr, "Region with unit: ", p.Super())
+				fmt.Fprintln(os.Stderr, "Has SC: ", s.Graph().SC(p) != nil)
 				if s.Graph().SC(p) != nil {
 					godip.Logf("%v now belongs to %v", p.Super(), u.Nation)
 					s.SetSC(p.Super(), u.Nation)

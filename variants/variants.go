@@ -101,6 +101,8 @@ func BuildGraph(variantData VariantData) *graph.Graph {
 		startingSc, ok := variantData.StartingSupplyCenters[province]
 		if ok {
 			subnode.SC(startingSc)
+		} else if regionData.IsSupplyCenter {
+			subnode.SC(godip.Neutral)
 		}
 	}
 	return graph
