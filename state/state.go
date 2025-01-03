@@ -339,6 +339,9 @@ func (self *State) Load(
 
 func (self *State) SetDislodger(attacker, victim godip.Province) {
 	self.memoizedProvSlices = map[string][]godip.Province{}
+	if self.dislodgers == nil {
+		self.dislodgers = make(map[godip.Province]godip.Province)
+	}
 
 	self.dislodgers[attacker.Super()] = victim.Super()
 }
@@ -370,6 +373,9 @@ func (self *State) SetSC(p godip.Province, n godip.Nation) {
 
 func (self *State) SetDislodged(prov godip.Province, unit godip.Unit) (err error) {
 	self.memoizedProvSlices = map[string][]godip.Province{}
+	if self.dislodgeds == nil {
+		self.dislodgeds = make(map[godip.Province]godip.Unit)
+	}
 
 	if found, _, ok := self.Dislodged(prov); ok {
 		err = fmt.Errorf("%v is already at %v", found, prov)
