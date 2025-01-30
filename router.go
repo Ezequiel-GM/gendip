@@ -1,4 +1,4 @@
-package main
+package gendip
 
 import (
 	"encoding/json"

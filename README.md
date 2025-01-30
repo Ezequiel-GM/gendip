@@ -1,17 +1,15 @@
 # Gendip
 
 ## Run locally
+Change the package name of `router.go` from `gendip` to `main`.
+
 From the project's root directory, run `go run router.go`.
 
 The `resolve` function can be reached at `localhost:8080/resolve`.
 
 ## Deploy to production
 
-Change the package name of `router.go` from `main` to `gendip`.
-
 From the project's root directory, run `gcloud functions deploy resolve --trigger-http --runtime=go122 --gen2 --region=us-central1 --allow-unauthenticated`.
-
-Revert the package name after deploying.
 
 [![Test godip](https://github.com/zond/godip/workflows/Test%20godip/badge.svg)](https://github.com/zond/godip/actions)
 [![GoDoc](https://godoc.org/github.com/zond/godip?status.svg)](https://godoc.org/github.com/zond/godip)
