@@ -62,6 +62,8 @@ var (
 	ErrIllegalDestination              = fmt.Errorf("ErrIllegalDestination")
 	ErrMissingConvoyPath               = fmt.Errorf("ErrMissingConvoyPath")
 	ErrIllegalMove                     = fmt.Errorf("ErrIllegalMove")
+	ErrAttackAgainstOwnNation          = fmt.Errorf("ErrAttackAgainstOwnNation")
+	ErrAttackSupportedByOwnNation      = fmt.Errorf("ErrAttackSupportedByOwnNation")
 	ErrConvoyParadox                   = fmt.Errorf("ErrConvoyParadox")
 	ErrIllegalSupportPosition          = fmt.Errorf("ErrIllegalSupportPosition")
 	ErrIllegalSupportDestination       = fmt.Errorf("ErrIllegalSupportDestination")
@@ -152,6 +154,14 @@ type ErrBounce struct {
 
 func (self ErrBounce) Error() string {
 	return fmt.Sprintf("ErrBounce:%v", self.Province)
+}
+
+type ErrFailedAttack struct {
+	Province Province
+}
+
+func (self ErrFailedAttack) Error() string {
+	return fmt.Sprintf("ErrFailedAttack:%v", self.Province)
 }
 
 var Debug = false

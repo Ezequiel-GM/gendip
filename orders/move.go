@@ -151,6 +151,9 @@ func (self *move) adjudicateAgainstCompetition(r godip.Resolver, forbiddenSuppor
 					}}).Any()) > 1 {
 					godip.Logf("'%v' vs '%v': %v", competingOrder, self, as)
 					r.AddBounce(self.targets[0], self.targets[1])
+					if forbiddenSupporter != nil {
+						return godip.ErrAttackSupportedByOwnNation
+					}
 					return godip.ErrBounce{competingOrder.Targets()[0]}
 				}
 			} else {
@@ -174,6 +177,9 @@ func (self *move) adjudicateAgainstCompetition(r godip.Resolver, forbiddenSuppor
 					godip.Logf("Not dislodged")
 					godip.Logf("'%v' vs '%v': %v", competingOrder, self, as)
 					r.AddBounce(self.targets[0], self.targets[1])
+					if forbiddenSupporter != nil {
+						return godip.ErrAttackSupportedByOwnNation
+					}
 					return godip.ErrBounce{competingOrder.Targets()[0]}
 				} else {
 					godip.DeIndent()
@@ -220,7 +226,10 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 			if !convoyed && !victimConvoyed && order.Targets()[1].Super() == self.targets[0].Super() {
 				as := MoveSupport(r, order.Targets()[0], order.Targets()[1], []godip.Nation{unit.Nation}) + 1
 				godip.Logf("'%v' vs '%v': %v", order, self, as)
-				if victim.Nation == unit.Nation || as >= attackStrength {
+				if victim.Nation == unit.Nation {
+					return godip.ErrAttackAgainstOwnNation
+				}
+				if as >= attackStrength {
 					return godip.ErrBounce{self.targets[1]}
 				}
 			} else {
@@ -233,8 +242,11 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 				} else {
 					godip.DeIndent()
 					godip.Logf("Failure: %v", err)
-					if victim.Nation == unit.Nation || 1 >= attackStrength {
-						return godip.ErrBounce{self.targets[1]}
+					if victim.Nation == unit.Nation {
+						return godip.ErrAttackAgainstOwnNation
+					}
+					if 1 >= attackStrength {
+						return godip.ErrFailedAttack{self.targets[1]}
 					}
 				}
 			}
@@ -242,7 +254,7 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 			hs := HoldSupport(r, self.targets[1]) + 1
 			godip.Logf("'%v': %v", order, hs)
 			if victim.Nation == unit.Nation || hs >= attackStrength {
-				return godip.ErrBounce{self.targets[1]}
+				return godip.ErrFailedAttack{self.targets[1]}
 			}
 		}
 	}
