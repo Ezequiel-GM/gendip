@@ -219,6 +219,7 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 	if victim, _, hasVictim := r.Unit(self.targets[1]); hasVictim {
 		forbiddenSupporter = &victim.Nation
 		attackStrength := MoveSupport(r, self.targets[0], self.targets[1], []godip.Nation{victim.Nation}) + 1
+		attackStrengthWithForbiddenSupports := MoveSupport(r, self.targets[0], self.targets[1], []godip.Nation{}) + 1
 		order, prov, _ := r.Order(self.targets[1])
 		godip.Logf("'%v' vs '%v': %v", self, order, attackStrength)
 		if order.Type() == godip.Move {
@@ -228,6 +229,9 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 				godip.Logf("'%v' vs '%v': %v", order, self, as)
 				if victim.Nation == unit.Nation {
 					return godip.ErrAttackAgainstOwnNation
+				}
+				if as >= attackStrength && attackStrengthWithForbiddenSupports >= as {
+					return godip.ErrAttackSupportedByOwnNation
 				}
 				if as >= attackStrength {
 					return godip.ErrBounce{self.targets[1]}
@@ -245,6 +249,9 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 					if victim.Nation == unit.Nation {
 						return godip.ErrAttackAgainstOwnNation
 					}
+					if 1 >= attackStrength && attackStrengthWithForbiddenSupports >= 1 {
+						return godip.ErrAttackSupportedByOwnNation
+					}
 					if 1 >= attackStrength {
 						return godip.ErrFailedAttack{self.targets[1]}
 					}
@@ -253,7 +260,13 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 		} else {
 			hs := HoldSupport(r, self.targets[1]) + 1
 			godip.Logf("'%v': %v", order, hs)
-			if victim.Nation == unit.Nation || hs >= attackStrength {
+			if victim.Nation == unit.Nation {
+				return godip.ErrAttackAgainstOwnNation
+			}
+			if hs >= attackStrength && attackStrengthWithForbiddenSupports >= hs {
+				return godip.ErrAttackSupportedByOwnNation
+			}
+			if hs >= attackStrength {
 				return godip.ErrFailedAttack{self.targets[1]}
 			}
 		}
