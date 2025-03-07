@@ -230,7 +230,7 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 				if victim.Nation == unit.Nation {
 					return godip.ErrAttackAgainstOwnNation
 				}
-				if as >= attackStrength && attackStrengthWithForbiddenSupports >= as {
+				if as >= attackStrength && attackStrengthWithForbiddenSupports > as {
 					return godip.ErrAttackSupportedByOwnNation
 				}
 				if as >= attackStrength {
@@ -249,7 +249,7 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 					if victim.Nation == unit.Nation {
 						return godip.ErrAttackAgainstOwnNation
 					}
-					if 1 >= attackStrength && attackStrengthWithForbiddenSupports >= 1 {
+					if 1 >= attackStrength && attackStrengthWithForbiddenSupports > 1 {
 						return godip.ErrAttackSupportedByOwnNation
 					}
 					if 1 >= attackStrength {
@@ -263,7 +263,7 @@ func (self *move) adjudicateMovementPhase(r godip.Resolver) error {
 			if victim.Nation == unit.Nation {
 				return godip.ErrAttackAgainstOwnNation
 			}
-			if hs >= attackStrength && attackStrengthWithForbiddenSupports >= hs {
+			if hs >= attackStrength && attackStrengthWithForbiddenSupports > hs {
 				return godip.ErrAttackSupportedByOwnNation
 			}
 			if hs >= attackStrength {
